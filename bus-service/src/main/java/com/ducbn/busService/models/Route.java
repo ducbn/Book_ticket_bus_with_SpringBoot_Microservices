@@ -17,10 +17,10 @@ public class Route extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "origin")
+    @Column(name = "departure_location")
     private String origin;
 
-    @Column(name = "destination")
+    @Column(name = "arrival_location")
     private String destination;
 
     @Column(name = "distance")

@@ -4,8 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
@@ -24,7 +24,7 @@ public class Booking extends BaseEntity {
 
     private Long busId;
 
-    private LocalDate bookingDate;
+    private LocalDateTime bookingDate;
 
     private BigDecimal totalAmount;
 

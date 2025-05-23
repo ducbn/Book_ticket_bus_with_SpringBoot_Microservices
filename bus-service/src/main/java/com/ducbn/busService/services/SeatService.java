@@ -2,7 +2,7 @@ package com.ducbn.busService.services;
 
 import com.ducbn.busService.models.Bus;
 import com.ducbn.busService.models.Seat;
-import com.ducbn.busService.models.SeatUpdateRequest;
+import com.ducbn.busService.dtos.SeatUpdateRequest;
 import com.ducbn.busService.repositories.BusRepository;
 import com.ducbn.busService.repositories.SeatRepository;
 import com.ducbn.busService.responses.SeatResponse;

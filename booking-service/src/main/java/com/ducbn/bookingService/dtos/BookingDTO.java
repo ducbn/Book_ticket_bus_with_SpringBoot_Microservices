@@ -3,6 +3,7 @@ package com.ducbn.bookingService.dtos;
 import lombok.*;
 import jakarta.validation.constraints.*;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -10,7 +11,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class BookingRequestDTO {
+public class BookingDTO {
 
     @NotNull(message = "User ID is required")
     private Long userId;
@@ -25,5 +26,5 @@ public class BookingRequestDTO {
     private List<String> seatNumbers;
 
     @NotNull(message = "Total amount is required")
-    private Double totalAmount;
+    private BigDecimal totalAmount;
 }

@@ -5,6 +5,7 @@ import com.ducbn.busService.models.*;
 import com.ducbn.busService.responses.BusListResponse;
 import com.ducbn.busService.responses.BusResponse;
 import com.ducbn.busService.services.BusService;
+import com.github.javafaker.Faker;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -143,47 +144,47 @@ public class BusController {
         }
     }
 
-//    @PostMapping("/generateFakeBus")
-//    public ResponseEntity<String> generateFakeBus() {
-//        Faker faker = new Faker(new Locale("vi"));
-//        Random random = new Random();
-//
-//        for (int i = 0; i < 1000; i++) {
-//            String busName = faker.bothify("##B-#####");
-//
-//            // Tránh trùng tên xe
-//            if (busService.existsByName(busName)) {
-//                continue;
-//            }
-//
-//            // Giờ khởi hành từ 6h đến 15h, giờ đến sau đó từ 1–3 tiếng
-//            int departureHour = random.nextInt(10) + 6;
-//            int arrivalHour = departureHour + random.nextInt(3) + 1;
-//
-//            // Random ID giả định có sẵn
-//            Long routeId = (long) (random.nextInt(4) + 1);
-//            Long companyId = (long) (random.nextInt(3) + 1);
-//            Long busTypeId = (long) (random.nextInt(3) + 1);
-//
-//            // Giá từ 50k đến 300k
-//            BigDecimal price = BigDecimal.valueOf((random.nextInt(26) + 5) * 10000);
-//
-//            BusDTO busDTO = BusDTO.builder()
-//                    .name(busName)
-//                    .departureTime(LocalTime.of(departureHour, 0))
-//                    .arrivalTime(LocalTime.of(arrivalHour, 0))
-//                    .price(price)
-//                    .routeId(routeId)
-//                    .companyId(companyId)
-//                    .busTypeId(busTypeId)
-//                    .build();
-//            try {
-//                busService.createBus(busDTO);
-//            } catch (Exception e) {
-//                return ResponseEntity.badRequest().body(e.getMessage());
-//            }
-//        }
-//        return ResponseEntity.ok("Product generated successfully");
-//    }
+    @PostMapping("/generateFakeBus")
+    public ResponseEntity<String> generateFakeBus() {
+        Faker faker = new Faker(new Locale("vi"));
+        Random random = new Random();
+
+        for (int i = 0; i < 1000; i++) {
+            String busName = faker.bothify("##B-#####");
+
+            // Tránh trùng tên xe
+            if (busService.existsByName(busName)) {
+                continue;
+            }
+
+            // Giờ khởi hành từ 6h đến 15h, giờ đến sau đó từ 1–3 tiếng
+            int departureHour = random.nextInt(10) + 6;
+            int arrivalHour = departureHour + random.nextInt(3) + 1;
+
+            // Random ID giả định có sẵn
+            Long routeId = (long) (random.nextInt(5) + 1);
+            Long companyId = (long) (random.nextInt(4) + 1);
+            Long busTypeId = (long) (random.nextInt(4) + 1);
+
+            // Giá từ 50k đến 300k
+            BigDecimal price = BigDecimal.valueOf((random.nextInt(26) + 5) * 10000);
+
+            BusDTO busDTO = BusDTO.builder()
+                    .name(busName)
+                    .departureTime(LocalTime.of(departureHour, 0))
+                    .arrivalTime(LocalTime.of(arrivalHour, 0))
+                    .price(price)
+                    .routeId(routeId)
+                    .companyId(companyId)
+                    .busTypeId(busTypeId)
+                    .build();
+            try {
+                busService.createBus(busDTO);
+            } catch (Exception e) {
+                return ResponseEntity.badRequest().body(e.getMessage());
+            }
+        }
+        return ResponseEntity.ok("Product generated successfully");
+    }
 
 }

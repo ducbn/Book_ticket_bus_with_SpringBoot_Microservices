@@ -1,6 +1,6 @@
 package com.ducbn.bookingService.controllers;
 
-import com.ducbn.bookingService.dtos.BookingRequestDTO;
+import com.ducbn.bookingService.dtos.BookingDTO;
 import com.ducbn.bookingService.services.BookingService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +15,7 @@ public class BookingController {
     private final BookingService bookingService;
 
     @PostMapping
-    public ResponseEntity<?> createBooking(@RequestBody @Validated BookingRequestDTO request) {
+    public ResponseEntity<?> createBooking(@RequestBody @Validated BookingDTO request) {
         return ResponseEntity.ok(bookingService.createBooking(request));
     }
 }

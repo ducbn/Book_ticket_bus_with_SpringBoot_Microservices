@@ -1,4 +1,4 @@
-package com.ducbn.busService.models;
+package com.ducbn.busService.dtos;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
