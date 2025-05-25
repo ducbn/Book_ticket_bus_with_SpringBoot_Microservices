@@ -1,5 +1,6 @@
 package com.ducbn.bookingService.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -17,6 +18,7 @@ public class BookingDetail {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JsonBackReference
     @JoinColumn(name = "booking_id", nullable = false)
     private Booking booking;
 

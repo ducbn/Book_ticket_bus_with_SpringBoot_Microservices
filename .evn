@@ -1,0 +1,128 @@
+# Email Configuration
+EMAIL_USERNAME=ducbui27924@gmail.com
+EMAIL_PASSWORD=vsyckaobljtwtxbe
+EMAIL_FROM=noreply@buscompany.com
+
+# AWS S3 Configuration
+AWS_S3_ACCESS_KEY=AKIARBCOWAOCHBBEQ7CW
+AWS_S3_SECRET_ACCESS_KEY=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
+
+
+# DATABASE INITIALIZATION SCRIPT
+
+CREATE DATABASE IF NOT EXISTS bus_db;
+CREATE DATABASE IF NOT EXISTS booking_db;
+CREATE DATABASE IF NOT EXISTS notification_db;
+
+USE bus_db;
+-- Add any initial bus service tables/data here
+
+USE booking_db;
+-- Add any initial booking service tables/data here
+
+USE notification_db;
+-- Add any initial notification service tables/data here
+
+# APPLICATION PROPERTIES FOR DOCKER
+# Create application-docker.properties for each service
+
+# discovery-server/src/main/resources/application-docker.properties
+server.port=8761
+spring.application.name=discovery-server
+eureka.client.register-with-eureka=false
+eureka.client.fetch-registry=false
+eureka.server.enable-self-preservation=false
+eureka.server.wait-time-in-ms-when-sync-empty=0
+management.endpoints.web.exposure.include=*
+
+# bus-service/src/main/resources/application-docker.properties
+spring.application.name=bus-service
+server.port=8081
+spring.datasource.url=jdbc:mysql://mysql:3306/bus_db?useSSL=false&serverTimezone=UTC
+spring.datasource.username=root
+spring.datasource.password=root
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+eureka.client.service-url.defaultZone=http://discovery-server:8761/eureka
+eureka.instance.prefer-ip-address=true
+management.endpoints.web.exposure.include=*
+spring.zipkin.base-url=http://zipkin:9411
+spring.sleuth.sampler.probability=1.0
+
+# booking-service/src/main/resources/application-docker.properties
+spring.application.name=booking-service
+server.port=8082
+spring.datasource.url=jdbc:mysql://mysql:3306/booking_db?useSSL=false&serverTimezone=UTC
+spring.datasource.username=root
+spring.datasource.password=root
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+eureka.client.service-url.defaultZone=http://discovery-server:8761/eureka
+eureka.instance.prefer-ip-address=true
+spring.kafka.bootstrap-servers=kafka:29092
+spring.kafka.producer.key-serializer=org.apache.kafka.common.serialization.StringSerializer
+spring.kafka.producer.value-serializer=org.springframework.kafka.support.serializer.JsonSerializer
+spring.kafka.producer.acks=all
+spring.kafka.producer.retries=3
+spring.kafka.producer.properties.enable.idempotence=true
+management.tracing.enabled=true
+management.zipkin.tracing.endpoint=http://zipkin:9411/api/v2/spans
+management.tracing.sampling.probability=1.0
+
+# notification-service/src/main/resources/application-docker.properties
+server.port=8083
+spring.application.name=notification-service
+spring.kafka.bootstrap-servers=kafka:29092
+spring.kafka.consumer.bootstrap-servers=kafka:29092
+spring.kafka.consumer.group-id=notification-service-group
+spring.kafka.consumer.auto-offset-reset=earliest
+spring.kafka.consumer.key-deserializer=org.apache.kafka.common.serialization.StringDeserializer
+spring.kafka.consumer.value-deserializer=org.springframework.kafka.support.serializer.JsonDeserializer
+spring.kafka.consumer.properties.spring.json.trusted.packages=*
+eureka.client.service-url.defaultZone=http://discovery-server:8761/eureka
+eureka.instance.prefer-ip-address=true
+
+# Email Configuration (Real Gmail)
+spring.mail.host=smtp.gmail.com
+spring.mail.port=587
+spring.mail.username=${EMAIL_USERNAME}
+spring.mail.password=${EMAIL_PASSWORD}
+spring.mail.from=${EMAIL_FROM}
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+spring.mail.properties.mail.smtp.starttls.required=true
+spring.mail.properties.mail.smtp.ssl.trust=smtp.gmail.com
+
+# For testing with MailHog (uncomment to use)
+# spring.mail.host=mailhog
+# spring.mail.port=1025
+# spring.mail.properties.mail.smtp.auth=false
+# spring.mail.properties.mail.smtp.starttls.enable=false
+
+# ===========================================
+# BUILD AND RUN COMMANDS
+# ===========================================
+
+# 1. Build all services
+#!/bin/bash
+echo "Building all services..."
+cd discovery-server && mvn clean package -DskipTests && cd ..
+cd bus-service && mvn clean package -DskipTests && cd ..
+cd booking-service && mvn clean package -DskipTests && cd ..
+cd notification-service && mvn clean package -DskipTests && cd ..
+
+# 2. Start all services
+docker-compose up -d
+
+# 3. Check services status
+docker-compose ps
+
+# 4. View logs
+docker-compose logs -f [service-name]
+
+# 5. Stop all services
+docker-compose down
+
+# 6. Stop and remove volumes
+docker-compose down -v

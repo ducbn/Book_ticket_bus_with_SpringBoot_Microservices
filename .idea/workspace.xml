@@ -5,42 +5,103 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71ab8bf5-d71c-4494-b3bc-6b84976f7ff3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.evn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/ducbn/bookingService/config/KafkaProducerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/ducbn/bookingService/event/BookingSuccessEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking-service/target/booking-service-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking-service/target/booking-service-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking-service/target/classes/com/ducbn/bookingService/config/KafkaProducerConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking-service/target/classes/com/ducbn/bookingService/event/BookingSuccessEvent$BookingSuccessEventBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking-service/target/classes/com/ducbn/bookingService/event/BookingSuccessEvent.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking-service/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking-service/target/surefire-reports/TEST-com.ducbn.bookingService.BookingServiceApplicationTests.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking-service/target/surefire-reports/com.ducbn.bookingService.BookingServiceApplicationTests.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking-service/target/test-classes/com/ducbn/bookingService/BookingServiceApplicationTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bus-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bus-service/target/bus-service-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bus-service/target/bus-service-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bus-service/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bus-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bus-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bus-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bus-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bus-service/target/surefire-reports/TEST-com.ducbn.busService.BusServiceApplicationTests.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bus-service/target/surefire-reports/com.ducbn.busService.BusServiceApplicationTests.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-server/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-server/target/discovery-server-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-server/target/discovery-server-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-server/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-server/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-server/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-server/target/surefire-reports/TEST-com.ducbn.discoveryServer.DiscoveryServerApplicationTests.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-server/target/surefire-reports/com.ducbn.discoveryServer.DiscoveryServerApplicationTests.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/ducbn/notificationService/NotificationServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/ducbn/notificationService/config/KafkaConsumerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/ducbn/notificationService/config/MailConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/ducbn/notificationService/consumers/BookingNotificationConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/ducbn/notificationService/event/BookingSuccessEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/ducbn/notificationService/service/EmailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/test/java/com/ducbn/notificationService/NotificationServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/target/classes/com/ducbn/notificationService/NotificationServiceApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/target/classes/com/ducbn/notificationService/config/KafkaConsumerConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/target/classes/com/ducbn/notificationService/config/MailConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/target/classes/com/ducbn/notificationService/consumers/BookingNotificationConsumer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/target/classes/com/ducbn/notificationService/event/BookingSuccessEvent$BookingSuccessEventBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/target/classes/com/ducbn/notificationService/event/BookingSuccessEvent.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/target/classes/com/ducbn/notificationService/service/EmailService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/target/notification-service-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/target/notification-service-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/target/surefire-reports/TEST-com.ducbn.notificationService.NotificationServiceApplicationTests.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/target/surefire-reports/com.ducbn.notificationService.NotificationServiceApplicationTests.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/target/test-classes/com/ducbn/notificationService/NotificationServiceApplicationTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/ducbn/bookingService/config/WebClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/ducbn/bookingService/config/WebClientConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/ducbn/bookingService/controllers/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/ducbn/bookingService/controllers/BookingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/ducbn/bookingService/dtos/BookingRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/ducbn/bookingService/dtos/BookingDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/ducbn/bookingService/dtos/SeatUpdateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/ducbn/bookingService/dtos/SeatUpdateRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/ducbn/bookingService/models/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/ducbn/bookingService/models/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/ducbn/bookingService/models/BookingDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/ducbn/bookingService/models/BookingDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/ducbn/bookingService/repositories/BookingDetailRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/ducbn/bookingService/repositories/BookingDetailRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/ducbn/bookingService/repositories/BookingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/ducbn/bookingService/repositories/BookingRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/ducbn/bookingService/services/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/ducbn/bookingService/services/BookingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/ducbn/bookingService/services/IBookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/ducbn/bookingService/services/IBookingService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/booking-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/booking-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bus-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bus-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bus-service/src/main/java/com/ducbn/busService/controllers/BusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bus-service/src/main/java/com/ducbn/busService/controllers/BusController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bus-service/src/main/java/com/ducbn/busService/controllers/RouteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bus-service/src/main/java/com/ducbn/busService/controllers/RouteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bus-service/src/main/java/com/ducbn/busService/controllers/SeatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bus-service/src/main/java/com/ducbn/busService/controllers/SeatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bus-service/src/main/java/com/ducbn/busService/models/Route.java" beforeDir="false" afterPath="$PROJECT_DIR$/bus-service/src/main/java/com/ducbn/busService/models/Route.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bus-service/src/main/java/com/ducbn/busService/models/SeatUpdateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/bus-service/src/main/java/com/ducbn/busService/dtos/SeatUpdateRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bus-service/src/main/java/com/ducbn/busService/services/ISeatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bus-service/src/main/java/com/ducbn/busService/services/ISeatService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bus-service/src/main/java/com/ducbn/busService/services/SeatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bus-service/src/main/java/com/ducbn/busService/services/SeatService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bus-service/src/main/resources/application.evn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bus-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/bus-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bus-service/target/classes/application.evn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bus-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/bus-service/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bus-service/target/classes/com/ducbn/busService/controllers/BusController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bus-service/target/classes/com/ducbn/busService/controllers/BusController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bus-service/target/classes/com/ducbn/busService/controllers/RouteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bus-service/target/classes/com/ducbn/busService/controllers/RouteController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bus-service/target/classes/com/ducbn/busService/controllers/SeatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bus-service/target/classes/com/ducbn/busService/controllers/SeatController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bus-service/target/classes/com/ducbn/busService/models/Route.class" beforeDir="false" afterPath="$PROJECT_DIR$/bus-service/target/classes/com/ducbn/busService/models/Route.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bus-service/target/classes/com/ducbn/busService/models/SeatUpdateRequest$SeatUpdateRequestBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bus-service/target/classes/com/ducbn/busService/models/SeatUpdateRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bus-service/target/classes/com/ducbn/busService/services/ISeatService.class" beforeDir="false" afterPath="$PROJECT_DIR$/bus-service/target/classes/com/ducbn/busService/services/ISeatService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bus-service/target/classes/com/ducbn/busService/services/SeatService.class" beforeDir="false" afterPath="$PROJECT_DIR$/bus-service/target/classes/com/ducbn/busService/services/SeatService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery-server/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/target/classes/com/ducbn/bookingService/controllers/BookingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/target/classes/com/ducbn/bookingService/controllers/BookingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/target/classes/com/ducbn/bookingService/models/Booking$BookingBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/target/classes/com/ducbn/bookingService/models/Booking$BookingBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/target/classes/com/ducbn/bookingService/models/Booking.class" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/target/classes/com/ducbn/bookingService/models/Booking.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/target/classes/com/ducbn/bookingService/models/BookingDetail$BookingDetailBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/target/classes/com/ducbn/bookingService/models/BookingDetail$BookingDetailBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/target/classes/com/ducbn/bookingService/models/BookingDetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/target/classes/com/ducbn/bookingService/models/BookingDetail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/target/classes/com/ducbn/bookingService/repositories/BookingDetailRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/target/classes/com/ducbn/bookingService/repositories/BookingDetailRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/target/classes/com/ducbn/bookingService/repositories/BookingRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/target/classes/com/ducbn/bookingService/repositories/BookingRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/target/classes/com/ducbn/bookingService/services/BookingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/target/classes/com/ducbn/bookingService/services/BookingService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/target/classes/com/ducbn/bookingService/services/IBookingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/target/classes/com/ducbn/bookingService/services/IBookingService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +113,7 @@
       <list>
         <option value="Enum" />
         <option value="Class" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -72,7 +134,18 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Docker.docker-compose.yml.adminer: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.booking-service: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.bus-service: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.discovery-server: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.kafka-ui: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.kafka: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.mysql-booking: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.mysql: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.notification-service: Compose Deployment.executor": "Run",
     "Docker.docker-compose.yml.zipkin: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.zookeeper: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -80,12 +153,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.BookingServiceApplication.executor": "Debug",
+    "Spring Boot.BookingServiceApplication.executor": "Run",
     "Spring Boot.BusServiceApplication.executor": "Run",
     "Spring Boot.DiscoveryServerApplication.executor": "Run",
+    "Spring Boot.NotificationServiceApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/ducbn/Documents/BackEnd_Java/book_ticket_bus_microservice",
+    "last_opened_file_path": "/Users/ducbn/Documents/BackEnd_Java/book_ticket_bus_microservice/notification-service",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -103,6 +177,11 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/notification-service" />
+      <recent name="$PROJECT_DIR$/discovery-server" />
+      <recent name="$PROJECT_DIR$/bus-service" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/bus-service/src/main/java/com/ducbn/busService" />
       <recent name="$PROJECT_DIR$/bus-service/src/main/resources" />
@@ -145,8 +224,70 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NotificationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="notification-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ducbn.notificationService.NotificationServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.booking-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="booking-service" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.bus-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="bus-service" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.discovery-server: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="discovery-server" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.kafka-ui: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="kafka-ui" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
       <method v="2" />
     </configuration>
     <configuration name="docker-compose.yml.zipkin: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
@@ -163,14 +304,23 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Docker.docker-compose.yml.kafka-ui: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml.zipkin: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.booking-service: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.bus-service: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.discovery-server: Compose Deployment" />
+      <item itemvalue="Spring Boot.NotificationServiceApplication" />
       <item itemvalue="Spring Boot.BookingServiceApplication" />
       <item itemvalue="Spring Boot.BusServiceApplication" />
       <item itemvalue="Spring Boot.DiscoveryServerApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yml.booking-service: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.bus-service: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.discovery-server: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.zipkin: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.kafka-ui: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -192,7 +342,10 @@
       <updated>1747676682437</updated>
       <workItem from="1747676683702" duration="5813000" />
       <workItem from="1747763242137" duration="1854000" />
-      <workItem from="1747765112739" duration="51351000" />
+      <workItem from="1747765112739" duration="59904000" />
+      <workItem from="1748078779101" duration="10054000" />
+      <workItem from="1748162644634" duration="898000" />
+      <workItem from="1748178499071" duration="11875000" />
     </task>
     <servers />
   </component>
@@ -204,8 +357,23 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/booking-service/src/main/java/com/ducbn/bookingService/controllers/BookingController.java</url>
-          <line>18</line>
+          <line>21</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/booking-service/src/main/java/com/ducbn/bookingService/services/BookingService.java</url>
+          <line>124</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/booking-service/src/main/java/com/ducbn/bookingService/services/BookingService.java</url>
+          <line>118</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/booking-service/src/main/java/com/ducbn/bookingService/services/BookingService.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -1,5 +1,6 @@
 package com.ducbn.bookingService.models;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -32,6 +33,7 @@ public class Booking extends BaseEntity {
     private BookingStatus status = BookingStatus.PENDING;
 
     @OneToMany(mappedBy = "booking", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
     private List<BookingDetail> bookingDetails;
 
 }

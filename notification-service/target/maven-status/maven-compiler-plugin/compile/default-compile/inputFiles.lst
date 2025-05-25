@@ -1,0 +1,6 @@
+/Users/ducbn/Documents/BackEnd_Java/book_ticket_bus_microservice/notification-service/src/main/java/com/ducbn/notificationService/NotificationServiceApplication.java
+/Users/ducbn/Documents/BackEnd_Java/book_ticket_bus_microservice/notification-service/src/main/java/com/ducbn/notificationService/config/KafkaConsumerConfig.java
+/Users/ducbn/Documents/BackEnd_Java/book_ticket_bus_microservice/notification-service/src/main/java/com/ducbn/notificationService/config/MailConfig.java
+/Users/ducbn/Documents/BackEnd_Java/book_ticket_bus_microservice/notification-service/src/main/java/com/ducbn/notificationService/consumers/BookingNotificationConsumer.java
+/Users/ducbn/Documents/BackEnd_Java/book_ticket_bus_microservice/notification-service/src/main/java/com/ducbn/notificationService/event/BookingSuccessEvent.java
+/Users/ducbn/Documents/BackEnd_Java/book_ticket_bus_microservice/notification-service/src/main/java/com/ducbn/notificationService/service/EmailService.java
