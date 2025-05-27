@@ -13,6 +13,8 @@
         <module>bus-service</module>
         <module>discovery-server</module>
         <module>notification-service</module>
+        <module>paymentService</module>
+        <module>chat-service</module>
     </modules>
 
     <properties>

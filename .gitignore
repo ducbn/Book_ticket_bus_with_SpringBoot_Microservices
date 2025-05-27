@@ -1,3 +1,6 @@
 .env
-/target/
+booking-service/target/
+bus-service/target/
+notification-service/target/
+discovery-server/target/
 *.jar

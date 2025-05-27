@@ -1,0 +1,24 @@
+DROP DATABASE IF EXISTS chat_db;
+
+CREATE DATABASE IF NOT EXISTS chat_db;
+USE chat_db;
+
+CREATE TABLE chat_room (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    user_id BIGINT NOT NULL,
+    company_id BIGINT NOT NULL,
+    bus_id BIGINT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE chat_message (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    chat_room_id BIGINT NOT NULL,
+    sender_type ENUM('USER', 'COMPANY') NOT NULL,
+    sender_id BIGINT NOT NULL,
+    content TEXT NOT NULL,
+    sent_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    is_read BOOLEAN DEFAULT FALSE,
+
+    FOREIGN KEY (chat_room_id) REFERENCES chat_room(id) ON DELETE CASCADE
+);
