@@ -17,7 +17,6 @@ public class ChatRoom {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // Reference to external services
     private Long customerId;      // From User Service
     private Long busOperatorId;   // From Bus Service
     private Long busRouteId;      // From Bus Service (optional)

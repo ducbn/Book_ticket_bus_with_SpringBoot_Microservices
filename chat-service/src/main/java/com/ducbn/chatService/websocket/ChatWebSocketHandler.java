@@ -34,7 +34,10 @@ public class ChatWebSocketHandler extends TextWebSocketHandler {
     private final ChatService chatService;
     private final ObjectMapper objectMapper;
 
-
+    /**
+     * Hàm được gọi khi một kết nối WebSocket mới được thiết lập.
+     * Xác định user từ session, lưu session và gửi danh sách các phòng chat của user.
+     */
     @Override
     public void afterConnectionEstablished(WebSocketSession session) throws Exception {
         Long userId = getUserIdFromSession(session);
@@ -55,6 +58,10 @@ public class ChatWebSocketHandler extends TextWebSocketHandler {
         }
     }
 
+    /**
+     * Xử lý các tin nhắn văn bản gửi đến từ client WebSocket.
+     * Phân loại theo kiểu tin nhắn: gửi tin, tham gia phòng, đánh dấu đã đọc, lấy danh sách phòng, đang gõ.
+     */
     @Override
     protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
         try {
@@ -93,6 +100,10 @@ public class ChatWebSocketHandler extends TextWebSocketHandler {
         }
     }
 
+    /**
+     * Hàm được gọi khi một kết nối WebSocket bị đóng.
+     * Xóa session ra khỏi danh sách quản lý và cập nhật userSessions.
+     */
     @Override
     public void afterConnectionClosed(WebSocketSession session, CloseStatus status) throws Exception {
         Long userId = getUserIdFromSession(session);
@@ -113,6 +124,9 @@ public class ChatWebSocketHandler extends TextWebSocketHandler {
         log.info("Session {} closed for user {}", sessionKey, userId);
     }
 
+    /**
+     * Xử lý yêu cầu gửi tin nhắn: lưu tin vào DB và broadcast đến các thành viên phòng chat.
+     */
     private void handleSendMessage(WebSocketMessageDTO wsMessage, Long userId) {
         try {
             SendMessageRequest request = SendMessageRequest.builder()
@@ -138,6 +152,10 @@ public class ChatWebSocketHandler extends TextWebSocketHandler {
             log.error("Error handling send message", e);
         }
     }
+
+    /**
+     * Xử lý yêu cầu tham gia phòng chat: kiểm tra quyền truy cập, gửi lịch sử tin nhắn và đánh dấu đã đọc.
+     */
 
     private void handleJoinRoom(WebSocketMessageDTO wsMessage, Long userId, WebSocketSession session) {
         try {
@@ -169,6 +187,9 @@ public class ChatWebSocketHandler extends TextWebSocketHandler {
         }
     }
 
+    /**
+     * Đánh dấu tất cả tin nhắn trong phòng là đã đọc và thông báo cho các thành viên khác trong phòng.
+     */
     private void handleMarkRead(WebSocketMessageDTO wsMessage, Long userId) {
         try {
             chatService.markMessagesAsRead(wsMessage.getRoomId(), userId);
@@ -186,6 +207,9 @@ public class ChatWebSocketHandler extends TextWebSocketHandler {
         }
     }
 
+    /**
+     * Thông báo cho các thành viên khác trong phòng rằng user đang gõ tin nhắn.
+     */
     private void handleTyping(WebSocketMessageDTO wsMessage, Long userId) {
         try {
             // Broadcast typing indicator to other room participants
@@ -201,6 +225,9 @@ public class ChatWebSocketHandler extends TextWebSocketHandler {
         }
     }
 
+    /**
+     * Gửi danh sách các phòng chat của người dùng khi vừa kết nối hoặc khi client yêu cầu.
+     */
     private void sendUserChatRooms(Long userId, WebSocketSession session) {
         try {
             List<ChatRoom> rooms = chatService.getUserChatRooms(userId);
@@ -219,6 +246,9 @@ public class ChatWebSocketHandler extends TextWebSocketHandler {
         }
     }
 
+    /**
+     * Gửi tin nhắn (broadcast) đến tất cả các user trong một phòng chat cụ thể.
+     */
     private void broadcastToRoom(Long roomId, WebSocketMessageDTO message) {
         try {
             ChatRoom room = chatService.getChatRoom(roomId);
@@ -231,6 +261,9 @@ public class ChatWebSocketHandler extends TextWebSocketHandler {
         }
     }
 
+    /**
+     * Gửi tin nhắn đến tất cả các thành viên trong phòng chat ngoại trừ người gửi (ví dụ đang gõ).
+     */
     private void broadcastToRoomExceptSender(Long roomId, Long senderId, WebSocketMessageDTO message) {
         try {
             ChatRoom room = chatService.getChatRoom(roomId);
@@ -247,6 +280,9 @@ public class ChatWebSocketHandler extends TextWebSocketHandler {
         }
     }
 
+    /**
+     * Gửi tin nhắn đến tất cả các session đang hoạt động của một user cụ thể.
+     */
     private void sendToUser(Long userId, WebSocketMessageDTO message) {
         Set<String> sessionIds = userSessions.get(userId);
         if (sessionIds != null && !sessionIds.isEmpty()) {
@@ -268,6 +304,9 @@ public class ChatWebSocketHandler extends TextWebSocketHandler {
         }
     }
 
+    /**
+     * Gửi thông báo lỗi đến client WebSocket.
+     */
     private void sendError(WebSocketSession session, String error) {
         try {
             WebSocketMessageDTO errorMessage = WebSocketMessageDTO.builder()
@@ -281,6 +320,9 @@ public class ChatWebSocketHandler extends TextWebSocketHandler {
         }
     }
 
+    /**
+     * Trích xuất userId từ URI của session WebSocket.
+     */
     private Long getUserIdFromSession(WebSocketSession session) {
         // Extract from query params or headers
         // In real implementation, this would come from JWT token or session
@@ -295,6 +337,9 @@ public class ChatWebSocketHandler extends TextWebSocketHandler {
         return null;
     }
 
+    /**
+     * Trích xuất userType (CUSTOMER hoặc BUS_OPERATOR) từ URI của session WebSocket.
+     */
     private String getUserTypeFromSession(WebSocketSession session) {
         String query = session.getUri().getQuery();
         if (query != null && query.contains("userType=")) {
@@ -307,6 +352,9 @@ public class ChatWebSocketHandler extends TextWebSocketHandler {
         return "CUSTOMER";
     }
 
+    /**
+     * Chuyển đổi đối tượng ChatMessage sang DTO để gửi qua WebSocket.
+     */
     private ChatMessageDTO convertToDTO(ChatMessage message) {
         return ChatMessageDTO.builder()
                 .id(message.getId())
@@ -322,6 +370,9 @@ public class ChatWebSocketHandler extends TextWebSocketHandler {
                 .build();
     }
 
+    /**
+     * Chuyển đổi đối tượng ChatRoom sang DTO để gửi qua WebSocket.
+     */
     private ChatRoomDTO convertToRoomDTO(ChatRoom room) {
         return ChatRoomDTO.builder()
                 .id(room.getId())
