@@ -15,6 +15,7 @@
         <module>notification-service</module>
         <module>paymentService</module>
         <module>chat-service</module>
+        <module>authentication-service</module>
     </modules>
 
     <properties>

@@ -27,6 +27,7 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
         </processorPath>
         <module name="chat-service" />
+        <module name="authentication-service" />
         <module name="paymentService" />
         <module name="notification-service" />
         <module name="booking-service" />
@@ -35,6 +36,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="authentication-service" options="-parameters" />
       <module name="booking-service" options="-parameters" />
       <module name="bus-service" options="-parameters" />
       <module name="chat-service" options="-parameters" />
