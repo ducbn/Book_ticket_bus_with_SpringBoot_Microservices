@@ -38,7 +38,7 @@ public class UserService implements IUserService {
         String phoneNumber = userDTO.getPhoneNumber();
         String email = userDTO.getEmail();
 
-        //check phone  number existing.
+        //check phone number existing.
         if(userRepository.existsByPhoneNumber(phoneNumber)){
             throw new DataIntegrityViolationException("Phone number already exists");
         }
@@ -80,6 +80,7 @@ public class UserService implements IUserService {
     }
 
     @Override
+    @Transactional
     public String login(String phoneNumber, String password, Long roleId) throws Exception {
         Optional<User> optionalUser = userRepository.findByPhoneNumber(phoneNumber);
         if(optionalUser.isEmpty()){

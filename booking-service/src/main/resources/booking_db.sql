@@ -1,3 +1,5 @@
+DROP DATABASE IF EXISTS booking_db;
+
 CREATE DATABASE IF NOT EXISTS booking_db;
 USE booking_db;
 
@@ -5,7 +7,7 @@ CREATE TABLE bookings (
     id BIGINT PRIMARY KEY AUTO_INCREMENT,
     user_id BIGINT NOT NULL,
     bus_id BIGINT NOT NULL,
-    booking_date DATE NOT NULL,
+    booking_date datetime NOT NULL,
     total_amount DECIMAL(10, 2) NOT NULL,
     status ENUM('PENDING', 'CONFIRMED', 'CANCELLED') DEFAULT 'PENDING',
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,

@@ -16,6 +16,7 @@
         <module>paymentService</module>
         <module>chat-service</module>
         <module>authentication-service</module>
+        <module>api-gateway</module>
     </modules>
 
     <properties>

@@ -4,7 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71ab8bf5-d71c-4494-b3bc-6b84976f7ff3" name="Changes" comment="" />
+    <list default="true" id="71ab8bf5-d71c-4494-b3bc-6b84976f7ff3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/api-gateway/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/ducbn/apiGateway/ApiGatewayApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/ducbn/apiGateway/component/JwtTokenUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/ducbn/apiGateway/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/ducbn/apiGateway/controller/FallbackController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/ducbn/apiGateway/filter/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/test/java/com/ducbn/apiGateway/ApiGatewayApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/resources/users_db.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bus-service/bus_db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/ducbn/authenticationService/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/ducbn/authenticationService/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/ducbn/authenticationService/config/WebSecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/ducbn/authenticationService/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/ducbn/authenticationService/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/ducbn/authenticationService/filter/JwtTokenFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/ducbn/authenticationService/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/ducbn/authenticationService/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/resources/booking_db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/resources/booking_db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,6 +50,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -56,13 +85,15 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.AuthenticationServiceApplication.executor": "Run",
+    "Spring Boot.ApiGatewayApplication.executor": "Run",
+    "Spring Boot.AuthenticationServiceApplication.executor": "Debug",
     "Spring Boot.BookingServiceApplication.executor": "Run",
     "Spring Boot.BusServiceApplication.executor": "Run",
     "Spring Boot.ChatServiceApplication.executor": "Run",
     "Spring Boot.DiscoveryServerApplication.executor": "Run",
     "Spring Boot.NotificationServiceApplication.executor": "Run",
     "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/ducbn/Documents/BackEnd_Java/book_ticket_bus_microservice/authentication-service/src/main/java/com/ducbn/authenticationService",
     "node.js.detected.package.eslint": "true",
@@ -74,8 +105,14 @@
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql",
+      "mysql_aurora"
+    ]
   }
 }]]></component>
   <component name="ReactorSettings">
@@ -98,11 +135,11 @@
       <recent name="$PROJECT_DIR$/bus-service/src/main/resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ducbn.apiGateway.config" />
+      <recent name="com.ducbn.apiGateway.filter" />
       <recent name="com.ducbn.authenticationService.response" />
       <recent name="com.ducbn.authenticationService.controller" />
       <recent name="com.ducbn.authenticationService.utils" />
-      <recent name="com.ducbn.authenticationService.component" />
-      <recent name="com.ducbn.authenticationService.model" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -116,6 +153,13 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.AuthenticationServiceApplication">
+    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="api-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ducbn.apiGateway.ApiGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AuthenticationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="authentication-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ducbn.authenticationService.AuthenticationServiceApplication" />
@@ -245,6 +289,7 @@
       <item itemvalue="Docker.docker-compose.yml.booking-service: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml.bus-service: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml.discovery-server: Compose Deployment" />
+      <item itemvalue="Spring Boot.ApiGatewayApplication" />
       <item itemvalue="Spring Boot.AuthenticationServiceApplication" />
       <item itemvalue="Spring Boot.ChatServiceApplication" />
       <item itemvalue="Spring Boot.PaymentServiceApplication" />
@@ -266,8 +311,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.26094.121" />
+        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-IU-251.26094.121" />
       </set>
     </attachedChunks>
   </component>
@@ -286,6 +331,11 @@
       <workItem from="1748162644634" duration="898000" />
       <workItem from="1748178499071" duration="30967000" />
       <workItem from="1748318330622" duration="14768000" />
+      <workItem from="1748591224189" duration="7808000" />
+      <workItem from="1749055761752" duration="25753000" />
+      <workItem from="1749232675127" duration="3048000" />
+      <workItem from="1749236606340" duration="2013000" />
+      <workItem from="1749238634916" duration="15983000" />
     </task>
     <servers />
   </component>
@@ -375,14 +425,57 @@
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/authentication-service/src/main/java/com/ducbn/authenticationService/service/UserService.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="14" />
+          <url>file://$PROJECT_DIR$/authentication-service/src/main/java/com/ducbn/authenticationService/filter/JwtTokenFilter.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication-service/src/main/java/com/ducbn/authenticationService/filter/JwtTokenFilter.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication-service/src/main/java/com/ducbn/authenticationService/controller/UserController.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication-service/src/main/java/com/ducbn/authenticationService/controller/UserController.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication-service/src/main/java/com/ducbn/authenticationService/config/SecurityConfig.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication-service/src/main/java/com/ducbn/authenticationService/config/SecurityConfig.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication-service/src/main/java/com/ducbn/authenticationService/config/SecurityConfig.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication-service/src/main/java/com/ducbn/authenticationService/config/SecurityConfig.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication-service/src/main/java/com/ducbn/authenticationService/config/SecurityConfig.java</url>
+          <line>28</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/authentication-service/src/main/java/com/ducbn/authenticationService/service/UserService.java</url>
-          <line>83</line>
-          <option name="timeStamp" value="15" />
+          <line>37</line>
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
